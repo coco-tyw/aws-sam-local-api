@@ -1,0 +1,23 @@
+{
+  "name": "aws-sam-local-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "NODE_ENV=development webpack --watch --config ./config/webpack.config.js",
+    "start": "NODE_ENV=development webpack --config ./config/webpack.config.js; sam local start-api -p 3001 -t ./sam/dev/template.yaml;"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "aws-sdk": "^2.486.0",
+    "babel-loader": "^8.0.6",
+    "glob": "^7.1.4",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}
